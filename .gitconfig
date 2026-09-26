@@ -1,0 +1,9 @@
+[user]
+	name = Your Name
+	email = you@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+[pull]
+	rebase = true
