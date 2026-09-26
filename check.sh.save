@@ -1,0 +1,80 @@
+#!/bin/bash
+
+echo "============================="
+echo "  Lab 0 Environment Checker  "
+echo "============================="
+echo ""
+
+PASS=0
+FAIL=0
+
+check() {
+    LABEL=$1
+    CMD=$2
+    if eval "$CMD" &> /dev/null; then
+        echo "  [PASS] $LABEL"
+        PASS=$((PASS + 1))
+    else
+        echo "  [FAIL] $LABEL"
+        FAIL=$((FAIL + 1))
+    fi
+}
+
+check "SSH is installed"       "ssh -V"
+check "Vim is installed"       "vim --version"
+check "Bash is available"      "bash --version"
+check "Terminal supports echo" "echo hello"
+
+echo ""
+echo "============================="
+echo "  Results: $PASS passed, $FAIL failed"
+echo "============================="
+echo ""
+
+if [ "$FAIL" -eq 0 ]; then
+    echo "  Great work! Your environment is ready to go."
+else
+    echo "  Something didn't pass. Re-read the setup steps"
+    echo "  for your OS above, or ask for help."
+fi
+#!/bin/bash
+
+echo "============================="
+echo "  Lab 0 Environment Checker  "
+echo "============================="
+echo ""
+
+PASS=0
+FAIL=0
+
+check() {
+    LABEL=$1
+    CMD=$2
+    if eval "$CMD" &> /dev/null; then
+        echo "  [PASS] $LABEL"
+        PASS=$((PASS + 1))
+    else
+        echo "  [FAIL] $LABEL"
+        FAIL=$((FAIL + 1))
+    fi
+}
+
+check "SSH is installed"       "ssh -V"
+check "Vim is installed"       "vim --version"
+check "Bash is available"      "bash --version"
+check "Terminal supports echo" "echo hello"
+
+echo ""
+echo "============================="
+echo "  Results: $PASS passed, $FAIL failed"
+echo "============================="
+echo ""
+
+if [ "$FAIL" -eq 0 ]; then
+    echo "  Great work! Your environment is ready to go."
+else
+    echo "  Something didn't pass. Re-read the setup steps"
+    echo "  for your OS above, or ask for help."
+fi
+^X
+
